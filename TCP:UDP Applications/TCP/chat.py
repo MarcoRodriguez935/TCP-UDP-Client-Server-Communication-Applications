@@ -1,4 +1,4 @@
-# Programming Assignment 1
+# TCP Client-Server Application
 # Project Members: Marco Rodriguez and Derek Castro
 # This project presents a TCP chat app that allows back and forth
 # communication between users through the use of sockets
