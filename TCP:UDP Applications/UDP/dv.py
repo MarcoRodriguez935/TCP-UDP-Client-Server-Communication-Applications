@@ -1,4 +1,4 @@
-# Project 2
+# UDP Client-Server Application
 # Project Members: Marco Rodriguez and Derek Castro
 # Sample commands for each node:
 # server -t 1.txt -i 20
