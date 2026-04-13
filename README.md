@@ -6,13 +6,16 @@ This repository contains two distinct Python-based network applications: a **TCP
 
 A multi-threaded chat application allowing users to establish multiple concurrent TCP connections to exchange messages
 
+
 **How to Run**
 
 Start the application by specifying a listening port:
 
 *python chat.py <port_number>*
 
+
 **Available Commands**
+
 Once the program is running, you can use the following commands:
 - myip: Displays the IP address of the current process
 - myport: Displays the listening port of the current process
@@ -22,9 +25,11 @@ Once the program is running, you can use the following commands:
 - terminate <connection_id>: Safely closes a specific connection
 - exit: Closes all connections and terminates the process
 
+
 **2. UDP Distance Vector Routing**
 
 A decentralized routing simulation where multiple nodes exchange routing tables to find the least-cost path to every other node in the network using the Distance Vector algorithm.
+
 
 **Topology Configuration**
 
@@ -34,12 +39,14 @@ This application relies on *.txt* files to define the network structure. The for
 3. Server list (ID, IP, and Port)
 4. Link Costs (Source ID, Destination ID, Cost)
 
+
 **How to Run**
 
 You must initialize each node with its specific topology file and a routing update interval:
 
 *python dv.py
 server -t <topology_file.txt> -i <interval_in_seconds>*
+
 
 **Available Commands**
 - display: shows the current routing table (Destination, Cost, and Next Hop)
@@ -49,12 +56,14 @@ server -t <topology_file.txt> -i <interval_in_seconds>*
 - disable <ID>: Simulates a link failure by setting the cost to a neighbor to infinity
 - crash: Simulates a node failure, notifying neighbors before exiting
 
+
 **Technical Features**
 
 - **Concurrency:** Uses Python's threading library to handle simultaneous listening and user input
 - **Socket Programming:** Demonstrates both SOCK_STREAM (TCP) for reliable messaging and SOCK_DGRAM (UDP) for protocol updates
 - **Dynamic Routing:** The UDP application implements Distance Vector logic, where receiving a neighbor's table triggers a recalculation of the local shortest path
 - **JSON Serialization:** Routing updates are exchanged as JSON objects for clean data parsing
+
 
 **Project Members**
 - Marco Rodriguez
